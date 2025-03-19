@@ -1,0 +1,15 @@
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    let minPrice = Infinity
+    let maxPrice = 0
+    
+    for(let i of prices){
+        minPrice = Math.min(minPrice,i)
+        const profit = i-minPrice
+        maxPrice = Math.max(maxPrice,profit)
+    }
+    return maxPrice
+};
